@@ -524,13 +524,47 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-footer-widget">
-                    <h6>PAREKH SOUTHERN POLYFEBRIC</h6>
-                    <p>
-                        Parekh Southern Polyfabric – Indore's trusted name in premium fabrics since 1996. 
-                        We bring you high-quality Cotton, Silk, Chiffon, Georgette, Rayon, Polyester, Velvet, Linen & more – crafted for comfort, elegance and durability.
-                    </p>
-                </div>
+      <div class="single-footer-widget">
+    <div class="footer_logo_container" style="display: flex; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
+        <a href="index.html" style="display: inline-block;">
+            <img src="img/logo.png" alt="Logo" class="footer-responsive-logo">
+        </a>
+    </div>
+    
+    <p style="line-height: 1.8; color: #777; font-size: 14px; text-align: justify;">
+        <strong>Parekh Southern Polyfabric</strong> – Indore's trusted name in premium fabrics since 1996. 
+        We bring you high-quality Cotton, Silk, Chiffon, Georgette, Rayon, Polyester, Velvet, Linen & more – crafted for comfort, elegance and durability.
+    </p>
+</div>
+
+<style>
+/* Footer Specific Logo Styling */
+.footer-responsive-logo {
+    height: 100px; /* Footer mein logo thoda bada accha lagta hai */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    filter: brightness(1); /* Agar footer dark hai toh ise brightness(0) invert(1) kar sakte hain white logo ke liye */
+    transition: transform 0.3s ease;
+}
+
+.footer-responsive-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive for Footer */
+@media (max-width: 768px) {
+    .footer-responsive-logo {
+        height: 55px; /* Mobile par thoda chhota */
+    }
+    .single-footer-widget {
+        text-align: center; /* Mobile par footer aksar center-align accha lagta hai */
+    }
+    .footer_logo_container {
+        justify-content: center !important; /* Mobile par logo center mein */
+    }
+}
+</style>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-footer-widget">

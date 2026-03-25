@@ -76,87 +76,123 @@
 	</style>
 
 	<!-- Start Header Area -->
-	<header class="header_area sticky-header">
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light main_box">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html" style="text-decoration: none;">
-    <h3 class="classic-logo mb-0">Parekh <span class="gold-text">Southern</span></h3>
-    <p class="classic-sub mb-0">Polyfabrics Associate</p>
-</a>
+	<!-- Start Header Area -->
+<header class="header_area sticky-header">
+    <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light main_box">
+            <div class="container">
+                <div class="header__logo">
+                    <a class="navbar-brand logo_h" href="index.html">
+                        <img src="img/logo.png" alt="Logo" class="responsive-logo">
+                        </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="category.html">Product</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item submenu dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                aria-expanded="false">Pages</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="nav-link" href="productgallery.html">Photo Gallery</a></li>
+                                <li class="nav-item"><a class="nav-link" href="management.html">Management</a></li>
+                                <li class="nav-item"><a class="nav-link" href="enquiry.html">Trade Enquiry</a></li>
+                                <li class="nav-item"><a class="nav-link" href="quotation.html">e-Quotation</a></li>
+                                <li class="nav-item"><a class="nav-link" href="auction.html">e-Auction</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contract.html">Tender</a></li>
+                                <li class="nav-item"><a class="nav-link" href="career.html">Career</a></li>
+                                <li class="nav-item"><a class="nav-link" href="circular.html">Circular</a></li>
+                                <li class="nav-item"><a class="nav-link" href="review.html">Review</a></li>
+                                <li class="nav-item"><a class="nav-link" href="appointment.html">Appointment</a></li>
+                                <li class="nav-item"><a class="nav-link" href="mediagallery.html">Media</a></li>
+                                <li class="nav-item"><a class="nav-link" href="associates.html">Associates</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
 
 <style>
+.header__logo {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    /* Mobile par overlap na ho isliye ye zaroori hai */
+    flex-shrink: 0; 
+}
+
+.responsive-logo {
+    height: 55px; /* Desktop height */
+    width: auto;
+    max-width: 300px; /* Mobile par width control karne ke liye */
+    object-fit: contain;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+/* Tablet aur Mobile View Adjustments (991px se niche) */
+@media (max-width: 991px) {
+    .responsive-logo {
+        height: 45px; /* Mobile par thoda chhota taaki menu barabar dikhe */
+        max-width: 140px; 
+    }
+    
+    .header__logo {
+        padding: 5px 0;
+        /* Mobile par logo ko thoda left mein rakhne ke liye */
+        margin-right: auto; 
+    }
+
+    /* Agar navbar toggler (hamburger) bahut bada dikh raha ho toh */
+    .navbar-toggler {
+        padding: 4px 8px;
+        font-size: 1rem;
+    }
+}
+
+/* Bilkul chhote phones ke liye (480px) */
+@media (max-width: 480px) {
+    .responsive-logo {
+        height: 50px;
+        max-width: 220px;
+    }
+}
+
+/* Jo text style aapne bheja tha uska backup */
 .classic-logo {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
     color: #222;
-    font-size: 1.8rem;
-    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1;
 }
 
 .gold-text {
-    color: #c0392b; /* Aapka brand red ya gold color bhi use kar sakte hain */
+    color: #c0392b;
     border-bottom: 2px solid #c0392b;
 }
 
 .classic-sub {
     font-family: 'Inter', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     color: #888;
-    margin-top: -2px;
 }
 </style>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item active"><a class="nav-link" href="about.html">About</a></li>
-							<li class="nav-item active"><a class="nav-link" href="category.html">Product</a></li>
-							<li class="nav-item active"><a class="nav-link" href="blog.html">Blog</a></li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Pages</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="productgallery.html">Product Photo Gallery</a></li>
-									<li class="nav-item"><a class="nav-link" href="management.html">Our Management</a></li>
-									<li class="nav-item"><a class="nav-link" href="enquiry.html">Trade Enquiry</a></li>
-									<li class="nav-item"><a class="nav-link" href="quotation.html">e-Quotation</a></li>
-									<li class="nav-item"><a class="nav-link" href="auction.html">e-Auction</a></li>
-									<li class="nav-item"><a class="nav-link" href="contract.html">Tender & Contract</a></li>
-									<li class="nav-item"><a class="nav-link" href="career.html">Career Page</a></li>
-									<li class="nav-item"><a class="nav-link" href="circular.html">Circular</a></li>
-									<li class="nav-item"><a class="nav-link" href="review.html">Customer Review</a></li>
-									<li class="nav-item"><a class="nav-link" href="appointment.html">Visit with Appointment </a></li>
-									<li class="nav-item"><a class="nav-link" href="mediagallery.html">Media Gallery</a></li>
-									<li class="nav-item"><a class="nav-link" href="associates.html">Our Textile Associates</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-						</ul>
-						
-					</div>
-				</div>
-			</nav>
-		</div>
-		<div class="search_input" id="search_input_box">
-			<div class="container">
-				<form class="d-flex justify-content-between">
-					<input type="text" class="form-control" id="search_input" placeholder="Search Here">
-					<button type="submit" class="btn"></button>
-					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
-				</form>
-			</div>
-		</div>
-	</header>
 	<!-- End Header Area -->
 
 	<!-- Start Banner Area -->
@@ -233,13 +269,47 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-footer-widget">
-                    <h6>PAREKH SOUTHERN POLYFEBRIC</h6>
-                    <p>
-                        Parekh Southern Polyfabric – Indore's trusted name in premium fabrics since 1996. 
-                        We bring you high-quality Cotton, Silk, Chiffon, Georgette, Rayon, Polyester, Velvet, Linen & more – crafted for comfort, elegance and durability.
-                    </p>
-                </div>
+      <div class="single-footer-widget">
+    <div class="footer_logo_container" style="display: flex; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
+        <a href="index.html" style="display: inline-block;">
+            <img src="img/logo.png" alt="Logo" class="footer-responsive-logo">
+        </a>
+    </div>
+    
+    <p style="line-height: 1.8; color: #777; font-size: 14px; text-align: justify;">
+        <strong>Parekh Southern Polyfabric</strong> – Indore's trusted name in premium fabrics since 1996. 
+        We bring you high-quality Cotton, Silk, Chiffon, Georgette, Rayon, Polyester, Velvet, Linen & more – crafted for comfort, elegance and durability.
+    </p>
+</div>
+
+<style>
+/* Footer Specific Logo Styling */
+.footer-responsive-logo {
+    height: 100px; /* Footer mein logo thoda bada accha lagta hai */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    filter: brightness(1); /* Agar footer dark hai toh ise brightness(0) invert(1) kar sakte hain white logo ke liye */
+    transition: transform 0.3s ease;
+}
+
+.footer-responsive-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive for Footer */
+@media (max-width: 768px) {
+    .footer-responsive-logo {
+        height: 55px; /* Mobile par thoda chhota */
+    }
+    .single-footer-widget {
+        text-align: center; /* Mobile par footer aksar center-align accha lagta hai */
+    }
+    .footer_logo_container {
+        justify-content: center !important; /* Mobile par logo center mein */
+    }
+}
+</style>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-footer-widget">

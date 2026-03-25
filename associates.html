@@ -76,87 +76,123 @@
 	</style>
 
 	<!-- Start Header Area -->
-	<header class="header_area sticky-header">
-		<div class="main_menu">
-			<nav class="navbar navbar-expand-lg navbar-light main_box">
-				<div class="container">
-					<!-- Brand and toggle get grouped for better mobile display -->
-					<a class="navbar-brand logo_h" href="index.html" style="text-decoration: none;">
-    <h3 class="classic-logo mb-0">Parekh <span class="gold-text">Southern</span></h3>
-    <p class="classic-sub mb-0">Polyfabrics Associate</p>
-</a>
+	<!-- Start Header Area -->
+<header class="header_area sticky-header">
+    <div class="main_menu">
+        <nav class="navbar navbar-expand-lg navbar-light main_box">
+            <div class="container">
+                <div class="header__logo">
+                    <a class="navbar-brand logo_h" href="index.html">
+                        <img src="img/logo.png" alt="Logo" class="responsive-logo">
+                        </a>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                    <ul class="nav navbar-nav menu_nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="category.html">Product</a></li>
+                        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                        <li class="nav-item submenu dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                                aria-expanded="false">Pages</a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item"><a class="nav-link" href="productgallery.html">Photo Gallery</a></li>
+                                <li class="nav-item"><a class="nav-link" href="management.html">Management</a></li>
+                                <li class="nav-item"><a class="nav-link" href="enquiry.html">Trade Enquiry</a></li>
+                                <li class="nav-item"><a class="nav-link" href="quotation.html">e-Quotation</a></li>
+                                <li class="nav-item"><a class="nav-link" href="auction.html">e-Auction</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contract.html">Tender</a></li>
+                                <li class="nav-item"><a class="nav-link" href="career.html">Career</a></li>
+                                <li class="nav-item"><a class="nav-link" href="circular.html">Circular</a></li>
+                                <li class="nav-item"><a class="nav-link" href="review.html">Review</a></li>
+                                <li class="nav-item"><a class="nav-link" href="appointment.html">Appointment</a></li>
+                                <li class="nav-item"><a class="nav-link" href="mediagallery.html">Media</a></li>
+                                <li class="nav-item"><a class="nav-link" href="associates.html">Associates</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
 
 <style>
+.header__logo {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    /* Mobile par overlap na ho isliye ye zaroori hai */
+    flex-shrink: 0; 
+}
+
+.responsive-logo {
+    height: 55px; /* Desktop height */
+    width: auto;
+    max-width: 300px; /* Mobile par width control karne ke liye */
+    object-fit: contain;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+/* Tablet aur Mobile View Adjustments (991px se niche) */
+@media (max-width: 991px) {
+    .responsive-logo {
+        height: 45px; /* Mobile par thoda chhota taaki menu barabar dikhe */
+        max-width: 140px; 
+    }
+    
+    .header__logo {
+        padding: 5px 0;
+        /* Mobile par logo ko thoda left mein rakhne ke liye */
+        margin-right: auto; 
+    }
+
+    /* Agar navbar toggler (hamburger) bahut bada dikh raha ho toh */
+    .navbar-toggler {
+        padding: 4px 8px;
+        font-size: 1rem;
+    }
+}
+
+/* Bilkul chhote phones ke liye (480px) */
+@media (max-width: 480px) {
+    .responsive-logo {
+        height: 50px;
+        max-width: 220px;
+    }
+}
+
+/* Jo text style aapne bheja tha uska backup */
 .classic-logo {
     font-family: 'Playfair Display', serif;
     font-weight: 900;
     color: #222;
-    font-size: 1.8rem;
-    font-style: italic;
+    font-size: 1.5rem;
+    line-height: 1;
 }
 
 .gold-text {
-    color: #c0392b; /* Aapka brand red ya gold color bhi use kar sakte hain */
+    color: #c0392b;
     border-bottom: 2px solid #c0392b;
 }
 
 .classic-sub {
     font-family: 'Inter', sans-serif;
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     text-transform: uppercase;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     color: #888;
-    margin-top: -2px;
 }
 </style>
-					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-					 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-					<!-- Collect the nav links, forms, and other content for toggling -->
-					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-						<ul class="nav navbar-nav menu_nav ml-auto">
-							<li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-							<li class="nav-item active"><a class="nav-link" href="about.html">About</a></li>
-							<li class="nav-item active"><a class="nav-link" href="category.html">Product</a></li>
-							<li class="nav-item active"><a class="nav-link" href="blog.html">Blog</a></li>
-							<li class="nav-item submenu dropdown">
-								<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Pages</a>
-								<ul class="dropdown-menu">
-									<li class="nav-item"><a class="nav-link" href="productgallery.html">Product Photo Gallery</a></li>
-									<li class="nav-item"><a class="nav-link" href="management.html">Our Management</a></li>
-									<li class="nav-item"><a class="nav-link" href="enquiry.html">Trade Enquiry</a></li>
-									<li class="nav-item"><a class="nav-link" href="quotation.html">e-Quotation</a></li>
-									<li class="nav-item"><a class="nav-link" href="auction.html">e-Auction</a></li>
-									<li class="nav-item"><a class="nav-link" href="contract.html">Tender & Contract</a></li>
-									<li class="nav-item"><a class="nav-link" href="career.html">Career Page</a></li>
-									<li class="nav-item"><a class="nav-link" href="circular.html">Circular</a></li>
-									<li class="nav-item"><a class="nav-link" href="review.html">Customer Review</a></li>
-									<li class="nav-item"><a class="nav-link" href="appointment.html">Visit with Appointment </a></li>
-									<li class="nav-item"><a class="nav-link" href="mediagallery.html">Media Gallery</a></li>
-									<li class="nav-item"><a class="nav-link" href="associates.html">Our Textile Associates</a></li>
-								</ul>
-							</li>
-							<li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-						</ul>
-						
-					</div>
-				</div>
-			</nav>
-		</div>
-		<div class="search_input" id="search_input_box">
-			<div class="container">
-				<form class="d-flex justify-content-between">
-					<input type="text" class="form-control" id="search_input" placeholder="Search Here">
-					<button type="submit" class="btn"></button>
-					<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
-				</form>
-			</div>
-		</div>
-	</header>
 	<!-- End Header Area -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 
@@ -165,7 +201,7 @@
         <span class="top-tag">PAREKH SOUTHERN POLYFABRIC</span>
         
         <h1 class="main-heading">
-    <span class="highlight-text">Appointment</span>
+    Our Textile <span class="highlight-text"> Associates</span>
         </h1>
         
         <div class="bold-line"></div>
@@ -399,104 +435,190 @@
     }
 </style>
 
-<section class="assoc-section">
-    <div class="container">
+<style>
+        /* Your custom map + content styles */
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes pointPulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(128, 0, 0, 0.4); }
+            70% { transform: scale(1.1); box-shadow: 0 0 0 10px rgba(128, 0, 0, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(128, 0, 0, 0); }
+        }
         
-        <div class="sec-header">
-            <span class="sub-label">A Legacy of Quality</span>
-            <h2>Our National <span style="color:var(--brand-orange);">Network.</span></h2>
-            <div class="header-line"></div>
+        .map-wrapper { 
+            position: relative; 
+            width: 100%; 
+            max-width: 620px; 
+            height: 600px; 
+            margin: 40px auto; 
+            animation: fadeIn 1.5s ease-in; 
+            border: 1px solid #ddd; 
+            background: #fff;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        
+        .dot {
+            position: absolute; width: 14px; height: 14px; 
+            background: radial-gradient(circle, #ff4d4d, #FFC300);
+            border: 3px solid #fff; border-radius: 50%; 
+            animation: pointPulse 2s infinite; z-index: 5;
+        }
+        
+        .label {
+            position: absolute; font-weight: bold; font-size: 15px; 
+            color: #302819; white-space: nowrap; 
+            font-family: 'Arial', sans-serif; z-index: 10;
+            text-shadow: 1px 1px 2px white;
+        }
+
+        .custom-content-wrapper {
+            padding: 20px 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .content-section {
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        h1, h2, h3, h4 {
+            margin: 0.5em 0;
+        }
+
+        p, li {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        /* Make sure main content starts after sidebar */
+        #colorlib-main-content {
+            margin-left: 0 !important; /* override if template forces left margin */
+            padding-left: 280px;       /* approx sidebar width - adjust if needed */
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        @media (max-width: 991px) {
+            #colorlib-main-content {
+                padding-left: 0;
+            }
+            .map-wrapper {
+                max-width: 100%;
+                height: 500px;
+            }
+        }
+    
+
+        .map-container {
+            width: 100%;
+            max-width: 900px;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Hover effect for pins */
+        .pin-group {
+            cursor: pointer;
+            transition: opacity 0.4s ease;
+        }
+
+        .pin-group:hover text {
+            fill: #d32f2f; /* Hover karne par text red ho jayega */
+        }
+
+        /* Animation Classes */
+        @keyframes pulse {
+            0% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.2); opacity: 0.5; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        
+    
+    </style>
+
+  <div id="colorlib-main-content">
+    <!-- Yeh naya wrapper map ko right mein laayega -->
+    <div class="map-wrapper-outer">
+        <div class="map-container">
+            <svg viewBox="0 0 1000 1000" id="india-map-svg" style="width: 100%; height: auto;">
+                <rect x="20" y="20" width="960" height="960" fill="none" stroke="#ddd" stroke-width="8" />
+
+                <text x="500" y="70" text-anchor="middle" font-size="29" font-weight="700" fill="#070c12">
+                    HC PAREKH & ASSOCIATES
+                </text>
+
+                <text x="500" y="105" text-anchor="middle" font-size="15" fill="#0f172b">
+                    www.hcparekh.com
+                </text>
+
+                <image 
+                    href="https://img.freepik.com/premium-vector/vector-map-black-outline-india-vector-illustration_686498-514.jpg?w=1060" 
+                    x="40" y="130" width="920" height="820" 
+                    preserveAspectRatio="xMidYMid meet" 
+                    opacity="0.28" 
+                />
+
+                <g id="pins-layer"></g>
+            </svg>
         </div>
-
-        <div class="map-wrapper">
-            
-            <div class="map-scale">
-                <div>300 km</div>
-                <div style="width: 100%; height: 1px; background: #999; margin: 3px 0;"></div>
-                <div>200 mi</div>
-            </div>
-
-            <div class="map-marker-wrap" style="left: 20%; top: 38%;">
-                <div class="map-marker"></div>
-                <div class="marker-label">
-                    <p class="label-title">Parekh Fabrics</p>
-                    <p class="label-meta">Global Textile Supply</p>
-                </div>
-            </div>
-
-            <div class="map-marker-wrap" style="left: 26%; top: 52%;">
-                <div class="map-marker"></div>
-                <div class="marker-label">
-                    <p class="label-title">Parekh Silk</p>
-                    <p class="label-meta">Premium Silk Collections</p>
-                </div>
-            </div>
-
-            <div class="map-marker-wrap" style="left: 58%; top: 54%;">
-                <div class="map-marker"></div>
-                <div class="marker-label">
-                    <p class="label-title">Parekh Rayon</p>
-                    <p class="label-meta">Synthetic Fiber Solutions</p>
-                </div>
-            </div>
-
-            <div class="map-marker-wrap" style="left: 45%; top: 66%;">
-                <div class="map-marker"></div>
-                <div class="marker-label">
-                    <p class="label-title">Parekh e-Trade Market (Textile)</p>
-                    <p class="label-meta">Digital B2B Sourcing</p>
-                </div>
-            </div>
-
-            <div class="map-marker-wrap" style="left: 36%; top: 78%;">
-                <div class="map-marker"></div>
-                <div class="marker-label">
-                    <p class="label-title">Parekh Chamber of Textile</p>
-                    <p class="label-meta">Industry Hub & Advisory</p>
-                </div>
-            </div>
-
-            <div class="map-marker-wrap" style="left: 71%; top: 43%;">
-                <div class="map-marker"></div>
-                <div class="marker-label">
-                    <p class="label-title">Parekh Linen</p>
-                    <p class="label-meta">Luxury Linen Range</p>
-                </div>
-            </div>
-
-            <div class="map-marker-wrap" style="left: 51%; top: 85%;">
-                <div class="map-marker"></div>
-                <div class="marker-label">
-                    <p class="label-title">Parekh Southern Polyfabrics</p>
-                    <p class="label-meta">Advanced Material Science</p>
-                </div>
-            </div>
-
-        </div>
-
-        <ul class="map-list-mobile">
-            <li class="map-list-item"><i class="fa-solid fa-industry"></i> Pareto Fabrics</li>
-            <li class="map-list-item"><i class="fa-solid fa-ribbon"></i> Pareto Silk</li>
-            <li class="map-list-item"><i class="fa-solid fa-mobile-screen-button"></i> Pareto e-Trade Market</li>
-            <li class="map-list-item"><i class="fa-solid fa-building-flag"></i> Pareto Chamber</li>
-            <li class="map-list-item"><i class="fa-solid fa-seedling"></i> Pareto Rayon</li>
-            <li class="map-list-item"><i class="fa-solid fa-couch"></i> Pareto Linen</li>
-            <li class="map-list-item"><i class="fa-solid fa-flask-vial"></i> Pareto Southern Polyfabrics</li>
-        </ul>
-
     </div>
-</section>
+</div>
+
+
 <footer class="footer-area section_gap">
     <div class="container">
         <div class="row">
             <div class="col-lg-3 col-md-6 col-sm-6">
-                <div class="single-footer-widget">
-                    <h6>PAREKH SOUTHERN POLYFEBRIC</h6>
-                    <p>
-                        Parekh Southern Polyfabric – Indore's trusted name in premium fabrics since 1996. 
-                        We bring you high-quality Cotton, Silk, Chiffon, Georgette, Rayon, Polyester, Velvet, Linen & more – crafted for comfort, elegance and durability.
-                    </p>
-                </div>
+      <div class="single-footer-widget">
+    <div class="footer_logo_container" style="display: flex; justify-content: flex-start; align-items: center; margin-bottom: 20px;">
+        <a href="index.html" style="display: inline-block;">
+            <img src="img/logo.png" alt="Logo" class="footer-responsive-logo">
+        </a>
+    </div>
+    
+    <p style="line-height: 1.8; color: #777; font-size: 14px; text-align: justify;">
+        <strong>Parekh Southern Polyfabric</strong> – Indore's trusted name in premium fabrics since 1996. 
+        We bring you high-quality Cotton, Silk, Chiffon, Georgette, Rayon, Polyester, Velvet, Linen & more – crafted for comfort, elegance and durability.
+    </p>
+</div>
+
+<style>
+/* Footer Specific Logo Styling */
+.footer-responsive-logo {
+    height: 100px; /* Footer mein logo thoda bada accha lagta hai */
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+    filter: brightness(1); /* Agar footer dark hai toh ise brightness(0) invert(1) kar sakte hain white logo ke liye */
+    transition: transform 0.3s ease;
+}
+
+.footer-responsive-logo:hover {
+    transform: scale(1.05);
+}
+
+/* Mobile Responsive for Footer */
+@media (max-width: 768px) {
+    .footer-responsive-logo {
+        height: 55px; /* Mobile par thoda chhota */
+    }
+    .single-footer-widget {
+        text-align: center; /* Mobile par footer aksar center-align accha lagta hai */
+    }
+    .footer_logo_container {
+        justify-content: center !important; /* Mobile par logo center mein */
+    }
+}
+</style>
             </div>
             <div class="col-lg-4 col-md-6 col-sm-6">
                 <div class="single-footer-widget">
@@ -574,6 +696,8 @@
     }
 </style>
 
+
+
 	<!--================Contact Success and Error message Area =================-->
 	<div id="success" class="modal modal-message fade" role="dialog">
 		<div class="modal-dialog">
@@ -607,6 +731,98 @@
 	<!--================End Contact Success and Error message Area =================-->
 
 
+    <script>
+    const locations = [
+        { id: 1, name: "Parekh Fabrics", city: "Ahmedabad", x: 330, y: 520 },
+        { id: 2, name: "Parekh Silk", city: "Surat", x: 350, y: 600 },
+        { id: 3, name: "Parekh Rayon", city: "Raipur", x: 498, y: 565 },
+        { id: 4, name: "Parekh Linen", city: "Kolkata", x: 625, y: 545 },
+        { id: 5, name: "Parekh e-Trade Market", city: "Hyderabad", x: 470, y: 645 },
+        { id: 6, name: "Parekh Chamber of Textile", city: "Bangalore", x: 405, y: 755 },
+        { id: 7, name: "Parekh Southern Polyfabrics", city: "Chennai", x: 475, y: 755 },
+    ];
+
+    const pinsLayer = document.getElementById('pins-layer');
+
+    function createPins() {
+        locations.forEach((loc, index) => {
+            // Adjust Label Positions (Logic from your React code)
+            let labelX = loc.x;
+            let labelY = loc.y - 35;
+            let textAnchor = "middle";
+
+            if (loc.id === 6) {
+                labelX = loc.x - 40;
+                labelY = loc.y - 5;
+                textAnchor = "end";
+            } else if (loc.id === 7) {
+                labelX = loc.x + 40;
+                labelY = loc.y - 5;
+                textAnchor = "start";
+            }
+
+            // Create SVG Group
+            const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
+            g.setAttribute("class", "pin-group");
+            g.style.opacity = "0";
+            
+            // Animation for appearance
+            setTimeout(() => {
+                g.style.opacity = "1";
+            }, index * 120 + 100);
+
+            // 1. Pulsing Glow
+            const glow = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            glow.setAttribute("cx", loc.x);
+            glow.setAttribute("cy", loc.y);
+            glow.setAttribute("r", "10");
+            glow.setAttribute("fill", "none");
+            glow.setAttribute("stroke", "#d32f2f");
+            glow.innerHTML = `
+                <animate attributeName="r" values="10;22" dur="1.5s" repeatCount="indefinite" />
+                <animate attributeName="opacity" values="0.7;0" dur="1.5s" repeatCount="indefinite" />
+            `;
+
+            // 2. Blinking Center Dot
+            const dot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+            dot.setAttribute("cx", loc.x);
+            dot.setAttribute("cy", loc.y);
+            dot.setAttribute("r", "6");
+            dot.setAttribute("fill", "#d32f2f");
+            dot.innerHTML = `
+                <animate attributeName="opacity" values="1;0.3;1" dur="1s" repeatCount="indefinite" />
+            `;
+
+            // 3. Text (Name and City)
+            const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+            text.setAttribute("x", labelX);
+            text.setAttribute("y", labelY);
+            text.setAttribute("text-anchor", textAnchor);
+            text.setAttribute("font-size", "14");
+            text.setAttribute("font-weight", "700");
+            text.setAttribute("fill", "#1a237e");
+            text.innerHTML = `
+                <tspan x="${labelX}" dy="0">${loc.name}</tspan>
+                <tspan x="${labelX}" dy="18" font-size="12" font-weight="600" fill="#555">${loc.city}</tspan>
+            `;
+
+            // Append everything
+            g.appendChild(glow);
+            g.appendChild(dot);
+            g.appendChild(text);
+            pinsLayer.appendChild(g);
+            
+            // Click event
+            g.addEventListener('click', () => {
+                console.log("Selected Location:", loc.name);
+                // Aap yahan click par koi bhi action add kar sakte hain
+            });
+        });
+    }
+
+    // Initialize
+    createPins();
+</script>
 	<script src="js/vendor/jquery-2.2.4.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
 	 crossorigin="anonymous"></script>
